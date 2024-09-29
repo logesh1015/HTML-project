@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="one">Hello World</h1>
+    <button onclick="change()" >Change</button>
+
+
+    <script>
+        var index=0
+        var char=document.getElementById("one")
+        console.log(char.textContent)
+        function change(){
+        
+        //1. Based on index odd/even, change the text content
+        //2. Assign the value based on 0 or 1
+        
+        if(index %2==0)
+        {
+            char.textContent="Hello World"
+            index = index+1;
+        }
+        else{
+            char.textContent="Bye World"
+            index = index+1;
+        }
+        // if(index==0){
+        //     char.textContent="Hello World"
+        //     index=1
+        //    }
+        //    else{
+        //      char.textContent="Bye World"
+        //      index=0
+        //    }          
+        }
+    
+
+    </script>
+</body>
+</html>
