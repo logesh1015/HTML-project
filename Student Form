@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+      
+        label {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px; 
+            display: block; 
+        }
+
+        .hello{
+            margin-bottom: 70px;
+        }
+
+        .game{
+            margin-top: 30px;
+        }
+
+        .pad{
+            margin-top: 20px;
+            margin-left: 60px;
+        }
+        .hell{
+            margin-top: 30px;
+        }
+
+        .welcome{
+            margin-top: 30px;
+        }
+   
+    </style>
+</head>
+<body>
+    <center><h1>STUDENT FORM</h1></center><hr>
+   <form id="studentform" class="box">
+        <label>Name</label>
+        <input id="name" type="text" placeholder="enter the name" maxlength="10"  required>
+        <span id="nameError" class="error"></span><br>
+
+        <label class="hell"><b>Age</b></label>
+        <input id="age" type="number" placeholder="enter the age" min="0" max="999" required>
+        <span id="ageError" class="error"></span><br>
+
+        <label class="welcome">Gender</label>
+        <input id="male" type="radio" value="Male" name="gender" required>Male
+        <input id="female" type="radio" value="Female" name="gender" required>Female<br>
+
+        <label class="game">Course</label>
+        <input id="course" type="text" placeholder="enter the course name" required>
+        <span id="courseError" class="error"></span><br>
+
+        <div class="pad">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear" class="hello">
+    </div>
+    </form>
+    
+   <table id="dataTable" border="1" width="50%" >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById("studentform").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+            var course = document.getElementById("course").value;
+
+        
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("ageError").innerText = "";
+            document.getElementById("courseError").innerText = "";
+
+            if (!validateInput()) {
+                return ; 
+            }
+
+            var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+            var newRow = table.insertRow();
+
+            newRow.insertCell(0).innerText = name;
+            newRow.insertCell(1).innerText = age;
+            newRow.insertCell(2).innerText = course;
+            newRow.insertCell(3).innerText = gender;
+
+            var deleteCell = newRow.insertCell(4);
+            var deleteButton = document.createElement("button");
+            deleteButton.innerText = "Delete";
+            deleteButton.onclick = function() {
+                table.deleteRow(newRow.rowIndex - 1);
+                if (table.rows.length == 0) {
+                    table.parentElement.remove();
+                }
+            }
+            deleteCell.appendChild(deleteButton);
+
+            document.getElementById("studentform").reset();
+        });
+
+        
+        function validateInput() {
+            var nameInput = document.getElementById("name").value;
+            var ageInput = document.getElementById("age").value;
+            var courseInput = document.getElementById("course").value;
+
+            var valid=true;
+            
+
+            if (!/^[A-Za-z ]*$/.test(nameInput)) {
+                document.getElementById("nameError").innerText = "Only letters are allowed";
+                valid=false;
+            } else {
+                document.getElementById("nameError").innerText = "";
+            }
+
+        
+            if (ageInput < 0) {
+                document.getElementById("ageError").innerText = "Age cannot be negative";
+                valid=false;
+            } else {
+                document.getElementById("ageError").innerText = "";
+            }
+
+            if (!/^[A-Za-z ]*$/.test(courseInput)) {
+                document.getElementById("courseError").innerText = "Only letters and spaces are allowed";
+                valid=false;
+            } else {
+                document.getElementById("courseError").innerText = "";
+            }
+            return valid;
+        }
+
+        document.getElementById("name").onkeyup = validateInput;
+        document.getElementById("age").onkeyup = validateInput; 
+        document.getElementById("course").onkeyup = validateInput;
+    </script>
+</body>
+</html>
