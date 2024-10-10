@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>To Do List</h1></center><hr>
+
+    <label>Enter your daily tasks :</label>
+    <input id="input" placeholder="enter">
+
+    <button onclick="add()">Add</button>
+
+    <ul id="one">
+        <li>
+            Cleaning
+            <button onclick="fire(event)">Delete</button>
+        </li>
+    </ul>
+
+    <script>
+        var input=document.getElementById("input")
+        var ul=document.getElementById("one")
+
+        function add(){
+            var newList=document.createElement("li")
+            newList.innerHTML=input.value + "<button onclick='fire(event)'>Delete</button>"
+            ul.append(newList)
+        }
+
+        function fire(event){
+            event.target.parentElement.remove()
+        }
+    </script>
+    
+</body>
+</html>
