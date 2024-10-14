@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Show</button>
+    <script>
+        var button=document.getElementById("btn")
+        button.addEventListener("click",function(){
+            alert("hey there")
+        })
+
+        button.addEventListener("mouseover",function(){
+            alert("hello")
+        })
+    </script>
+</body>
+</html>
