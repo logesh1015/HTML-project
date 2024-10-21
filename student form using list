@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Here is the table</h1>
+    <label>Name:</label>
+    <input type="text" id="name"><br>
+
+    <label>Age:</label>
+    <input type="number" id="age"><br>
+
+    <label>Address:</label>
+    <input type="text" id="address"><br> 
+
+    <button onclick="addEntry()">Add</button><br>
+    
+    <table id="tabel" border="1"> 
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+    </table>
+
+<script>
+    function addEntry() {
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var address = document.getElementById("address").value;
+
+        
+        if (name && age && address) { 
+            var tabel = document.getElementById("tabel");
+
+            tabel.innerHTML += `
+            <tr>
+                <td>${name}</td>
+                <td>${age}</td>
+                <td>${address}</td>
+            </tr>`;
+
+        
+            document.getElementById("name").value = ''; 
+            document.getElementById("age").value = '';
+            document.getElementById("address").value = '';
+        } else {
+            alert("Please enter the details");
+        }
+    }
+</script>
+</body>
+</html>
