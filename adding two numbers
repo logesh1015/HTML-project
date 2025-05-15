@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TEST</title>
+</head>
+<body>
+    <label>Num 1:</label>
+    <input type="number" placeholder="enter the number" id="num1">
+    <label>Num 2:</label>
+    <input type="number" placeholder="enter the number" id="num2">
+
+    <p id="result">Result :</p>
+
+    
+
+    <button onclick="hello()">CLICK</button>
+</body>
+<script>
+    function hello(){
+    var a = document.getElementById("num1").value
+    var b = document.getElementById("num2").value
+    
+    var total = Number(a)+Number(b)
+    var sum = document.getElementById("result")
+
+    sum.textContent= "result :" + total
+
+}
+    
+</script>
+</html>
