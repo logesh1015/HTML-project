@@ -1,0 +1,219 @@
+<html>
+
+<head>
+  <title>Assessment 6</title>
+  <style>
+    .container {
+      background-color: purple;
+      width: 1000px;
+      height: 100px;
+      text-align: center;
+      color: white;
+      margin: 20px auto 0;
+      padding: 10px 0;
+    }
+
+    .content {
+      width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      border: 2px solid black;
+    }
+
+    .blackBox {
+      color: white;
+      background-color: black;
+      width: 1000px;
+      height: 20px;
+      text-align: center;
+      background-color: black;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    .blackBox div {
+      width: 20%;
+      text-align: center;
+
+    }
+
+    .image {
+      width: 40%;
+      text-align: center;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      border: 3px solid purple;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f8f0c6;
+    }
+
+    .box {
+      display: flex;
+      border: 2px solid black;
+      padding: 20px;
+      margin: 20px;
+      background-color: #f3e4b0;
+    }
+
+    .boxTable {
+      color:purple;
+      border: 2px solid black;
+      padding: 20px;
+      margin: 20px;
+      background-color: #f3e4b0;
+    }
+
+    .text-section {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .text-section h2 {
+      color: purple;
+      font-family: Arial, sans-serif;
+    }
+
+    .text-section p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .image-section {
+      flex: 1;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+      border: 1px solid black;
+    }
+    .row-color{
+      background-color: brown;
+      color:white
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h3><b>Welcome to Event WebPage</b></h3>
+    <h4><i>Design the Future</i></h4>
+  </div>
+
+  <div class="blackBox">
+    <div><b>About</b></div>
+    <div><b>Schedule</b></div>
+    <div><b>Content</b></div>
+  </div>
+
+  <div class="content">
+    <div class="box">
+      <div class="text-section">
+        <h2>HOME</h2>
+        <p><strong>Event management is executing an entire event, including event planning, logistics,
+          budgeting, vendor management, marketing, mapping the event agenda, inviting speakers, setting up registration,
+          overseeing execution, and more. For event planners, the lifecycle of an event would vary based on the scope of
+          the event they are managing. It would also vary based on the event mode, i.e., whether they plan a virtual,
+          hybrid, or onsite event. Although the specifics of the event planning business might differ, event management
+          involves some common aspects at its core.</strong></p>
+      </div>
+      <div class="image-section">
+        <img src="C:\Users\paviethra\OneDrive\Pictures\Screenshots\Screenshot 2025-06-30 180833.png"
+          alt="Event Management Image">
+      </div>
+    </div>
+  </div>
+
+  <!-- 2nd page -->
+  <div class="container">
+    <h3><b>Welcome to Event WebPage</b></h3>
+    <h4><i>Design the Future</i></h4>
+  </div>
+
+  <div class="blackBox">
+    <div><b>About</b></div>
+    <div><b>Schedule</b></div>
+    <div><b>Content</b></div>
+  </div>
+
+  <div class="content">
+    <div class="box">
+      <div class="text-section">
+        <h2>ABOUT</h2>
+        <p><strong>
+          Dreambright India’s hospitality and services match international standards, which is the reason we can give
+          concreteness to a fragmented piece of idea/concept. Giving attention to the minute details and specifications
+          provided by clients we have been able to efficiently put our best foot forward and offer the most reliable and
+          pragmatic solutions and services.</strong>
+        </p>
+      </div>
+      <div class="image-section">
+        <img src="C:\Users\paviethra\OneDrive\Pictures\Scr	eenshots\Screenshot 2025-06-30 183540.png" alt="Error">
+      </div>
+    </div>
+  </div>
+
+  <!-- 3rd page -->
+  <div class="container">
+    <h3><b>Welcome to Event WebPage</b></h3>
+    <h4><i>Design the Future</i></h4>
+  </div>
+
+  <div class="blackBox">
+    <div><b>About</b></div>
+    <div><b>Schedule</b></div>
+    <div><b>Content</b></div>
+  </div>
+
+
+  <div class="content">
+    <div class="boxTable">
+      <h2>SCHEDULE</h2>
+      <table border="2" cellpadding="10" style="border-collapse: collapse; border: 2px solid black; width: 900px; ">
+
+        <tr class="row-color">
+          <th>Time</th>
+          <th>Topic</th>
+          <th>Speaker</th>
+        </tr>
+
+        <tr>
+          <td>9.00AM</td>
+          <td>Welcome Notes</td>
+          <td>Mr.Ajay Kumar</td>
+        </tr>
+
+        <tr>
+          <td>10.00AM</td>
+          <td>Events Order</td>
+          <td>Mrs. Sahana</td>
+        </tr>
+
+        <tr>
+          <td>11.00AM</td>
+          <td>Budget</td>
+          <td>Mr. Varun Karthik</td>
+        </tr>
+
+        <tr>
+          <td>12.00AM</td>
+          <td>Vote of Thanks</td>
+          <td>Mrs. Tina</td>
+        </tr> 
+      </table>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
